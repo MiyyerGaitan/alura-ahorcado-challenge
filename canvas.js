@@ -21,10 +21,15 @@ function event1 (word) {
 }
 
 function review_word (word) {
+    let count = 0;
     for (let item of words){
         if (word == item){
-            alert("La palabra ya se encuentra agregada")
+            alert("La palabra ya se encuentra agregada");
+            count +=1;
         }
     }
-    words.push(word); 
+    if (count == 0){
+        words.push(word);
+        count = 0;
+    }
 }
